@@ -7,15 +7,19 @@ import './layout.css';
 const Layout = () => {
     return (
         <>
-            <div className='layout '>
-                <div className='navbar'>
-                    <Navbar />
-                </div>
-                <div className='sidebar'>
+            <div className='layout grid'>
+                <div className='leftlayout '>
                     <Sidebar />
                 </div>
-                <div className='routes'>
-                    <Page />
+                <div className='rightlayout  '>
+
+                    <div className='navbar '>
+                        <Navbar />
+                    </div>
+
+                    <div className='routes'>
+                        <Page />
+                    </div>
                 </div>
             </div>
         </>

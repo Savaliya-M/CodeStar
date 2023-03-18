@@ -3,8 +3,12 @@ import React from 'react'
 const Sidebar = () => {
     return (
         <>
-            <div className='sidebar border-2 flex '>
-                cdlksndk
+            <div className='sidebar   '>
+                <div className="logo">
+                    <h1 className='text-2xl text-center'>CODESTAR</h1>
+                </div>
+
+
             </div>
         </>
     )

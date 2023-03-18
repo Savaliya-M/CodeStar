@@ -1,30 +1,23 @@
 .layout {
-    max-width: 100%;
-    width: 100%;
-    max-height: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-areas:
-        'navbar navbar navbar navbar navbar navbar'
-        'sidebar routes routes routes routes routes ';
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.leftlayout {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    height: 100vh;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.rightlayout {
+    grid-column-start: 3;
+    grid-column-end: 10;
 }
 
 .navbar {
-    grid-area: navbar;
-    border: 2px solid red;
-}
-
-.sidebar {
-    grid-area: sidebar;
-    border: 2px solid blue;
-}
-
-.routes {
-    grid-area: routes;
-    bottom: 0%;
-    right: 1em;
-    position: absolute;
-    top: 4em;
-    left: 5em;
-    border: 2px solid orange;
+    /* width: 100%; */
 }

@@ -8,9 +8,7 @@ const Navbar = () => {
     return (
         <>
             <div className='navbar flex '>
-                <div className="logo">
-                    <h1 className='text-2xl text-center'>CODESTAR</h1>
-                </div>
+
                 <div className='right flex text-2xl items-center text-white space-x-5'>
                     <BsMoon />
                     <div className='flex items-center'>
