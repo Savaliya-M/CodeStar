@@ -8,7 +8,8 @@ const Layout = () => {
     return (
         <>
             <div className='layout grid'>
-                <div className='leftlayout '>
+                <div className='leftlayout'>
+
                     <Sidebar />
                 </div>
                 <div className='rightlayout  '>

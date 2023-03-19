@@ -4,20 +4,29 @@
 }
 
 .leftlayout {
+    display: flex;
     grid-column-start: 1;
     grid-column-end: 3;
     border: 2px solid #ccc;
     box-sizing: border-box;
     height: 100vh;
+    position: sticky;
+    left: 0;
+    top: 0;
+    bottom: 0;
     grid-row-start: 1;
     grid-row-end: 3;
+
 }
 
 .rightlayout {
     grid-column-start: 3;
     grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 .navbar {
-    /* width: 100%; */
+    position: sticky;
+    top: 0;
 }

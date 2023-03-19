@@ -1,13 +1,15 @@
-.navbar {
-    /* border: 1px solid rgb(78, 76, 76); */
-    border: 2px solid blue;
+.mainNavbar {
     padding: 0.75rem 1rem 0.75rem 0;
-    background-color: var(--transparent-color);
+    background-color: var(--box-shadow) !important;
+    color: black !important;
+    backdrop-filter: blur(8px) !important;
+    user-select: none;
+    border: 1px solid var(--glass-border-color);
+    /* position: sticky !important; */
 
 }
 
 .right {
     flex: 78%;
-    /* right: 0; */
     justify-content: end;
 }

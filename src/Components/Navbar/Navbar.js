@@ -7,7 +7,7 @@ import "./navbar.css";
 const Navbar = () => {
     return (
         <>
-            <div className='navbar flex '>
+            <div className='mainNavbar flex '>
 
                 <div className='right flex text-2xl items-center text-white space-x-5'>
                     <BsMoon />
