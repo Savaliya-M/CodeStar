@@ -1,9 +1,15 @@
-/* .logo {
-    color: var(--hover-color);
-    flex: 22%;
-    padding: 0.5rem 0 0.5rem 0;
-} */
-
 .sidebar {
-    position: fixed;
+
+    width: 100%;
+    border: 1px solid var(--glass-border-color);
+    color: var(--text-color);
+
+}
+
+.logo {
+    padding: 0.75rem 1rem 0.75rem 0;
+    border: 1px solid var(--glass-border-color);
+    width: 100%;
+    color: var(--hover-color);
+
 }

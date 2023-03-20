@@ -7,7 +7,6 @@
     display: flex;
     grid-column-start: 1;
     grid-column-end: 3;
-    border: 2px solid #ccc;
     box-sizing: border-box;
     height: 100vh;
     position: sticky;
@@ -29,4 +28,9 @@
 .navbar {
     position: sticky;
     top: 0;
+}
+
+.page {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
 }
