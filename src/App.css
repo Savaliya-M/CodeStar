@@ -1,7 +1,7 @@
  body {
    margin: 0;
    padding: 0;
-   color: var(--light-text);
+   color: var(--text-color);
    position: relative;
    background-color: var(--mode);
  }
@@ -39,7 +39,6 @@
 
  .sbar {
    flex: 22%;
-   /* height: ; */
  }
 
  .pages {

@@ -13,3 +13,16 @@
     color: var(--hover-color);
 
 }
+
+.ruler {
+    border: 0.15rem solid var(--mode);
+}
+
+.link:hover .ruler {
+    border: 0.15rem solid var(--hover-color)
+}
+
+.link:hover {
+    background-color: var(--background-color);
+    color: var(--hover-color);
+}
