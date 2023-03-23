@@ -1,3 +1,40 @@
 .path {
     background-color: var(--tab-box-color);
 }
+
+input[name=language] {
+    background-color: var(--mode);
+}
+
+.btn-add {
+    background-color: var(--hover-color);
+    color: black;
+}
+
+input[name=language]:hover {
+    border: 2px solid var(--hover-color);
+    transition: 0.4s all linear;
+}
+
+input[name=language]:focus {
+    border: 2px solid var(--hover-color);
+    outline: none;
+
+}
+
+.language-cards {
+    box-shadow: 0 0 10px var(--box-shadow);
+    background-color: var(--transparent-color);
+}
+
+.card {
+    border: 1px solid #a8a8a88e;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px #9b9b9ba8;
+}
+
+.delete {
+    flex: 10%;
+}

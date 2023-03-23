@@ -16,9 +16,9 @@ const Sidebar = () => {
                 </div>
                 <div className='side-links mt-4'>
                     <div className='link flex align-middle items-center   text-xl'>
-                        <div className='ruler    pt-11 mr-6'>
+                        <div className='ruler mr-7'>
                         </div>
-                        <div className='link-icons py-3 mr-6 text-2xl font-extrabold'>
+                        <div className='link-icons py-4 mr-6 text-2xl font-extrabold'>
                             <RiBracesFill />
                         </div>
                         <div className='link-text py-3'>
@@ -26,9 +26,9 @@ const Sidebar = () => {
                         </div>
                     </div>
                     <div className='link flex align-middle items-center   text-xl'>
-                        <div className='ruler pt-11 mr-6'>
+                        <div className='ruler mr-7'>
                         </div>
-                        <div className='link-icons py-3 mr-6 text-2xl font-extrabold'>
+                        <div className='link-icons py-4 mr-6 text-2xl font-extrabold'>
                             <MdOutlineQuestionAnswer />
                         </div>
                         <div className='link-text flex'>
@@ -37,9 +37,9 @@ const Sidebar = () => {
                         </div>
                     </div>
                     <div className='link flex align-middle items-center   text-xl'>
-                        <div className='ruler pt-11 mr-6'>
+                        <div className='ruler mr-7'>
                         </div>
-                        <div className='link-icons py-3 mr-6 text-2xl font-extrabold'>
+                        <div className='link-icons py-4 mr-6 text-2xl font-extrabold'>
                             <BsTrophy />
                         </div>
                         <div className='link-text'>

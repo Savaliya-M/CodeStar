@@ -16,6 +16,7 @@
 
 .ruler {
     border: 0.15rem solid var(--mode);
+    padding-top: 3.1rem;
 }
 
 .link:hover .ruler {

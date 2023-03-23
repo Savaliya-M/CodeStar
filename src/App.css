@@ -1,46 +1,53 @@
- body {
-   margin: 0;
-   padding: 0;
-   color: var(--text-color);
-   position: relative;
-   background-color: var(--mode);
- }
+:root {
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+  /* font-size: 30px; */
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  position: relative;
+  background-color: var(--mode);
+}
 
 
- .dark-theme {
-   --mode: #1e1e1e;
-   --text-color: white;
-   --primary: #f44336;
-   --hover-color: #03cffc;
-   --transparent-color: #1e1e1e99;
-   --transparent-color-2: rgba(30, 30, 30);
-   --box-shadow: rgba(85, 85, 85, 0.836);
-   --border-color: white;
-   --glass-border-color: rgba(255, 255, 255, 0.125);
-   --background-color: rgb(37, 37, 37);
-   --scrollbar-background-color: rgb(48, 47, 47);
-   --scrollbar-thumb-color: rgb(99, 99, 99);
-   --tab-box-color: #262626;
- }
+.dark-theme {
+  --mode: #1e1e1e;
+  --text-color: white;
+  --primary: #f44336;
+  --hover-color: #03cffc;
+  --transparent-color: #1e1e1e99;
+  --transparent-color-2: rgba(30, 30, 30);
+  --box-shadow: rgba(85, 85, 85, 0.836);
+  --border-color: white;
+  --glass-border-color: rgba(255, 255, 255, 0.125);
+  --background-color: rgb(37, 37, 37);
+  --scrollbar-background-color: rgb(48, 47, 47);
+  --scrollbar-thumb-color: rgb(99, 99, 99);
+  --tab-box-color: #262626;
+}
 
- .light-theme {
-   --mode: #f8f8f8;
-   --text-color: #000000;
-   --primary: #f44336;
-   --hover-color: #03cffc;
-   --transparent-color: rgba(255, 255, 255, 0.7);
-   --glass-border-color: rgba(0, 0, 0, 0.185);
-   --box-shadow: rgb(199, 199, 199);
-   --border-color: black;
-   --scrollbar-background-color: #141414;
-   --scrollbar-thumb-color: rgb(163, 163, 163);
-   --tab-box-color: #eaeaeac9;
- }
+.light-theme {
+  --mode: #f8f8f8;
+  --text-color: #000000;
+  --primary: #f44336;
+  --hover-color: #03cffc;
+  --transparent-color: rgba(255, 255, 255, 0.7);
+  --glass-border-color: rgba(0, 0, 0, 0.185);
+  --box-shadow: rgb(199, 199, 199);
+  --border-color: black;
+  --scrollbar-background-color: #141414;
+  --scrollbar-thumb-color: rgb(163, 163, 163);
+  --tab-box-color: #eaeaeac9;
+}
 
- .sbar {
-   flex: 22%;
- }
+.sbar {
+  flex: 22%;
+}
 
- .pages {
-   flex: 78%;
- }
+.pages {
+  flex: 78%;
+}

@@ -33,3 +33,7 @@
 .routes {
     width: 100%;
 }
+
+.select-file-container {
+    border: 3px dashed var(--border-color);
+}
