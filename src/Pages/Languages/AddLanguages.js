@@ -46,8 +46,6 @@ const AddLanguages = () => {
                             <LanguageCard />
                             <button className='flex delete items-center justify-center'><MdOutlineDelete /></button>
                         </div>
-
-
                     </div>
                 </div>
 
