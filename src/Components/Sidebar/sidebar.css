@@ -27,3 +27,8 @@
     background-color: var(--background-color);
     color: var(--hover-color);
 }
+
+.Question-list {
+    /* opacity: 0; */
+    /* transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out; */
+}

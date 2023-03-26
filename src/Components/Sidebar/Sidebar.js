@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom'
 import { RiBracesFill } from "react-icons/ri";
 // import { GrCertificate } from "react-icons/gr";
 import { BsTrophy } from "react-icons/bs";
-import { MdOutlineQuestionAnswer, MdOutlineKeyboardArrowUp, MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 import './sidebar.css'
+import Collapsible from '../Collpsible/Collapsible';
 
 const Sidebar = () => {
-    const [listtoggale, setListtoggale] = new useState(true);
+    // const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+    const objc = {
+        "id": "1",
+        "name": "Languages",
+        "icon": "language",
+    }
 
-    useEffect(() => {
-        console.log(listtoggale);
-    }, [listtoggale])
 
     return (
         <>
@@ -28,67 +30,37 @@ const Sidebar = () => {
                             <RiBracesFill />
                         </div>
                         <div className='link-text py-3'>
-                            <Link to="/languages">Languages</Link>
+                            <Link to="/">Languages</Link>
                         </div>
                     </div>
-                    <div className='link flex align-middle items-center   text-xl' onClick={() => setListtoggale(!listtoggale)}>
-                        <div className='ruler mr-7'>
-                        </div>
-                        <div className='link-icons py-4 mr-6 text-2xl font-extrabold'>
-                            <MdOutlineQuestionAnswer />
-                        </div>
-                        <div className='link-text flex' >
-                            Questions
-                            {
-                                listtoggale ? <MdOutlineKeyboardArrowUp className='ml-20 font-extrabold text-3xl' /> : <MdOutlineKeyboardArrowDown className='ml-20 font-extrabold text-3xl' />
-                            }
 
+                    <Collapsible >
+                        <div className={'Question-list '}>
+                            {Object.keys(objc).map((data) => {
+                                return (
+                                    <div className='link flex align-middle items-center text-xl'>
+                                        <div className='ruler mr-7'>
+                                        </div>
+                                        <div className='pl-6 link-icons py-2 mr-6 text-2xl font-extrabold'>
+                                            <RiBracesFill />
+
+                                        </div>
+
+                                        <div className='link-text py-2'>
+                                            <Link to="/Question-list/java">Languages</Link>
+
+                                        </div>
+
+                                    </div>
+
+
+                                )
+                            })
+                            }
                         </div>
-                    </div>
-                    {listtoggale ?
-                        <div className=''>
-                            <div className=' link flex align-middle items-center text-xl'>
-                                <div className='ruler !pt-9  mr-7'>
-                                </div>
-                                <div className='pl-6 link-icons py-2 mr-6 text-2xl font-extrabold'>
-                                    <RiBracesFill />
-                                </div>
-                                <div className='link-text py-2'>
-                                    <Link to="/languages">Languages</Link>
-                                </div>
-                            </div>
-                            <div className=' link flex align-middle items-center text-xl'>
-                                <div className='ruler !pt-9  mr-7'>
-                                </div>
-                                <div className='pl-6 link-icons py-2 mr-6 text-2xl font-extrabold'>
-                                    <RiBracesFill />
-                                </div>
-                                <div className='link-text py-2'>
-                                    <Link to="/languages">Languages</Link>
-                                </div>
-                            </div>
-                            <div className=' link flex align-middle items-center text-xl'>
-                                <div className='ruler !pt-9  mr-7'>
-                                </div>
-                                <div className='pl-6 link-icons py-2 mr-6 text-2xl font-extrabold'>
-                                    <RiBracesFill />
-                                </div>
-                                <div className='link-text py-2'>
-                                    <Link to="/languages">Languages</Link>
-                                </div>
-                            </div>
-                            <div className=' link flex align-middle items-center text-xl'>
-                                <div className='ruler !pt-9  mr-7'>
-                                </div>
-                                <div className='pl-6 link-icons py-2 mr-6 text-2xl font-extrabold'>
-                                    <RiBracesFill />
-                                </div>
-                                <div className='link-text py-2'>
-                                    <Link to="/languages">Languages</Link>
-                                </div>
-                            </div>
-                        </div> : <></>
-                    }
+                    </Collapsible>
+
+
                     <div className='link flex align-middle items-center text-xl'>
                         <div className='ruler mr-7'>
                         </div>
