@@ -1,0 +1,31 @@
+.btn-question {
+    background-color: rgb(3, 207, 252);
+}
+
+.Question-Detail {
+    flex: 95%;
+}
+
+.Question-Icon {
+    flex: 5%;
+}
+
+.btn-delete:hover {
+    color: var(--hover-color);
+}
+
+.btn-edit:hover {
+    color: var(--hover-color);
+}
+
+.Question {
+    border: 2px solid var(--glass-border-color);
+    box-shadow: 0 0 10px var(--box-shadow);
+}
+
+.Question:hover {
+    cursor: pointer;
+    border: 2px solid var(--hover-color);
+    box-shadow: 0 0 15px var(--hover-color);
+    transition: all 0.2s linear;
+}

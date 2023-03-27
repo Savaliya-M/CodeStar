@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { RiBracesFill } from "react-icons/ri";
 // import { GrCertificate } from "react-icons/gr";
@@ -8,7 +8,6 @@ import './sidebar.css'
 import Collapsible from '../Collpsible/Collapsible';
 
 const Sidebar = () => {
-    // const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
     const objc = {
         "id": "1",
         "name": "Languages",
@@ -45,7 +44,6 @@ const Sidebar = () => {
                                             <RiBracesFill />
 
                                         </div>
-
                                         <div className='link-text py-2'>
                                             <Link to="/Question-list/java">Languages</Link>
 
