@@ -8,11 +8,7 @@ import './sidebar.css'
 import Collapsible from '../Collpsible/Collapsible';
 
 const Sidebar = () => {
-    const objc = {
-        "id": "1",
-        "name": "Languages",
-        "icon": "language",
-    }
+
 
 
     return (
@@ -35,26 +31,52 @@ const Sidebar = () => {
 
                     <Collapsible >
                         <div className={'Question-list '}>
-                            {Object.keys(objc).map((data) => {
-                                return (
-                                    <div className='link flex align-middle items-center text-xl'>
-                                        <div className='ruler mr-7'>
-                                        </div>
-                                        <div className='pl-6 link-icons py-2 mr-6 text-2xl font-extrabold'>
-                                            <RiBracesFill />
+                            {/* {Object.keys(objc).map((data) => { */}
+                            {/* return ( */}
+                            <div className='link flex align-middle items-center text-xl'>
+                                <div className='ruler mr-7'>
+                                </div>
+                                <div className='pl-6 link-icons py-2 mr-6 text-2xl font-extrabold'>
+                                    <RiBracesFill />
 
-                                        </div>
-                                        <div className='link-text py-2'>
-                                            <Link to="/Question-list/java">Languages</Link>
+                                </div>
+                                <div className='link-text py-2'>
+                                    <Link to="/Question-list/java">Languages</Link>
 
-                                        </div>
+                                </div>
 
-                                    </div>
+                            </div>
+                            <div className='link flex align-middle items-center text-xl'>
+                                <div className='ruler mr-7'>
+                                </div>
+                                <div className='pl-6 link-icons py-2 mr-6 text-2xl font-extrabold'>
+                                    <RiBracesFill />
+
+                                </div>
+                                <div className='link-text py-2'>
+                                    <Link to="/Question-list/java">Languages</Link>
+
+                                </div>
+
+                            </div>
+                            <div className='link flex align-middle items-center text-xl'>
+                                <div className='ruler mr-7'>
+                                </div>
+                                <div className='pl-6 link-icons py-2 mr-6 text-2xl font-extrabold'>
+                                    <RiBracesFill />
+
+                                </div>
+                                <div className='link-text py-2'>
+                                    <Link to="/Question-list/java">Languages</Link>
+
+                                </div>
+
+                            </div>
 
 
-                                )
+                            {/* )
                             })
-                            }
+                            } */}
                         </div>
                     </Collapsible>
 
