@@ -2,7 +2,7 @@
     background-color: var(--tab-box-color);
 }
 
-input[name=language] {
+input[name=LanguageName] {
     background-color: var(--mode);
 }
 
@@ -11,12 +11,12 @@ input[name=language] {
     color: black;
 }
 
-input[name=language]:hover {
+input[name=LanguageName]:hover {
     border: 2px solid var(--hover-color);
     transition: 0.4s all linear;
 }
 
-input[name=language]:focus {
+input[name=LanguageName]:focus {
     border: 2px solid var(--hover-color);
     outline: none;
 
@@ -38,3 +38,4 @@ input[name=language]:focus {
 .delete {
     flex: 10%;
 }
+
