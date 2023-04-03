@@ -11,6 +11,7 @@ const AddLanguageLogic = () => {
     imageUrl: "",
     Questions: [],
   });
+  const [currentLangData, setCurrentLangData] = new useState({});
   const [img, setImg] = new useState();
 
   const LangDataOnChange = (e) => {
@@ -56,8 +57,8 @@ const AddLanguageLogic = () => {
     });
   };
 
-  const LanguageAddClick = async (e) => {
-    e.preventDefault();
+  const LanguageAddClick = async () => {
+    // e.preventDefault();
     try {
       await FileUpload(fileRef.current.files[0]);
     } catch (error) {
@@ -71,14 +72,23 @@ const AddLanguageLogic = () => {
         .post("http://localhost:3010/api/admin/addLanguage", langData)
         .then((res) => {
           console.log(res);
-        })
-        .then(() => {
-          setLangData({ LanguageName: "", imageUrl: "" });
-          setImg(null);
-          alert("Language added successfully");
         });
+      alert("Language added successfully");
+      setLangData({ LanguageName: "", imageUrl: "" });
+      setImg();
     }
   }, [langData.imageUrl]);
+
+  useEffect(() => {
+    const apicall = async () => {
+      await axios
+        .get("http://localhost:3010/api/admin/getLanguages")
+        .then((res) => {
+          setCurrentLangData(res.data);
+        });
+    };
+    apicall();
+  }, []);
 
   return {
     langData,
@@ -88,6 +98,7 @@ const AddLanguageLogic = () => {
     fileUploadClick,
     LanguageAddClick,
     img,
+    currentLangData,
   };
 };
 

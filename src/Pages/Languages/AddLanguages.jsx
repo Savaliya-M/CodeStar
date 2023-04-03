@@ -14,6 +14,7 @@ const AddLanguages = () => {
     fileUploadClick,
     LanguageAddClick,
     img,
+    currentLangData,
   } = AddLanguageLogic();
   return (
     <>
@@ -46,7 +47,7 @@ const AddLanguages = () => {
               onClick={fileUploadClick}
             >
               {img ? (
-                <img src={img} className=" !h-full" alt="Icone" />
+                <img src={img} className="w-24 h-24" alt="Icone" />
               ) : (
                 <>
                   <AiOutlineCloudUpload className="text-6xl" />
@@ -63,36 +64,23 @@ const AddLanguages = () => {
             </div>
           </div>
           <div className="language-cards mt-10 grid grid-cols-2">
-            <div className="card p-3 flex text-2xl cursor-pointer">
-              <LanguageCard />
-              <button className="flex delete items-center justify-center">
-                <MdOutlineDelete />
-              </button>
-            </div>
-            <div className="card p-3 flex text-2xl cursor-pointer">
-              <LanguageCard />
-              <button className="flex delete items-center justify-center">
-                <MdOutlineDelete />
-              </button>
-            </div>
-            <div className="card p-3 flex text-2xl cursor-pointer">
-              <LanguageCard />
-              <button className="flex delete items-center justify-center">
-                <MdOutlineDelete />
-              </button>
-            </div>
-            <div className="card p-3 flex text-2xl cursor-pointer">
-              <LanguageCard />
-              <button className="flex delete items-center justify-center">
-                <MdOutlineDelete />
-              </button>
-            </div>
-            <div className="card p-3 flex text-2xl cursor-pointer">
-              <LanguageCard />
-              <button className="flex delete items-center justify-center">
-                <MdOutlineDelete />
-              </button>
-            </div>
+            {currentLangData.languages ? (
+              Object.keys(currentLangData.languages).map((key) => {
+                return (
+                  <div
+                    className="card p-3 flex text-2xl cursor-pointer"
+                    key={key}
+                  >
+                    <LanguageCard data={currentLangData.languages[key]} />
+                    <button className="flex delete items-center justify-center">
+                      <MdOutlineDelete />
+                    </button>
+                  </div>
+                );
+              })
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>
