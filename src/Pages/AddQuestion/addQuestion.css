@@ -1,17 +1,17 @@
-.TextEditor {
+/* .TextEditor {
     box-sizing: border-box;
-    /* width: 95vw !important; */
+    width: 95vw !important;
   }
 
 .TextEditor {
     background-color: var(--transparent-color);
     margin: 1.5rem 0;
-    /* width: 24rem; */
+    width: 24rem;
     height: 0;
     transition: border 0.1s linear;
-  }
+  } */
   
-  .TextEditor:focus-within {
+  /* .TextEditor:focus-within {
     border: 2px solid var(--hover-color);
   }
   
@@ -21,4 +21,6 @@
 
   .textarea {
     background-color: aquamarine;
-  }
+  } */
+
+  .cke_contents{margin:5px;background-color:blue;}
