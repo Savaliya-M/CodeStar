@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const AddQuestionLogic = () => {
-  const [questionText, setQuestionText] = useState();
-  const [Content, setContent] = useState("");
+  const [questionText, setQuestionText] = useState("");
+  const [code, setCode] = useState("");
 
-  return { questionText, setQuestionText, setContent, Content };
+  return { questionText, setQuestionText, code, setCode };
 };
 
 export default AddQuestionLogic;
