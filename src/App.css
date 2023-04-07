@@ -14,7 +14,7 @@ body {
 }
 
 
-.dark-theme {
+.dark {
   --mode: #1e1e1e;
   --text-color: white;
   --primary: #f44336;
@@ -30,7 +30,7 @@ body {
   --tab-box-color: #262626;
 }
 
-.light-theme {
+.light {
   --mode: #f8f8f8;
   --text-color: #000000;
   --primary: #f44336;
