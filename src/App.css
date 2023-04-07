@@ -8,9 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  color: var(--text-color);
   position: relative;
-  background-color: var(--mode);
 }
 
 
@@ -50,4 +48,10 @@ body {
 
 .pages {
   flex: 78%;
+}
+
+#App {
+  color: var(--text-color);
+  background-color: var(--mode);
+
 }

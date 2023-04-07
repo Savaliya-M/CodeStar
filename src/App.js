@@ -14,8 +14,8 @@ function App() {
   return (
     <>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <div className={theme}>
-          <Layout />
+        <div className={theme} id="App">
+          <Layout toggleTheme={toggleTheme} />
         </div>
       </ThemeContext.Provider>
     </>
