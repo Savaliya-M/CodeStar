@@ -8,7 +8,7 @@ const Navbar = ({ toggleTheme }) => {
   return (
     <>
       <div className="mainNavbar flex ">
-        <div className="right flex text-2xl items-center text-white space-x-5">
+        <div className="right flex text-2xl items-center space-x-5">
           <div onClick={toggleTheme}>
             <BsMoon />
           </div>

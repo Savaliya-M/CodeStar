@@ -4,6 +4,8 @@
 
 input[name=LanguageName] {
     background-color: var(--mode);
+    border: 2px solid var(--text-color);
+
 }
 
 .btn-add {
