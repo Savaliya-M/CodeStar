@@ -135,4 +135,58 @@
     color: var(--text-color);
   }
 
+  .CodeEditor{
+    width: 100%;
+  box-sizing: border-box;
+  border: 2px solid var(--glass-border-color);
+  background-color: var(--transparent-color-2);
+  transition: border 0.1s linear;
+  }
+
   
+  .CodeEditor:focus-within {
+    border: 2px solid var(--hover-color);
+  }
+  
+  .CodeEditor:hover:not(.CodeEditor:focus-within) {
+    border-color: var(--border-color);
+  }
+
+  .code_editor_textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 10rem;
+    background-color: transparent;
+    resize: vertical;
+    color: var(--text-color);
+    font-size: 0.65rem;
+    border: none;
+    padding: 0.3rem 0 0.3rem 0.3rem;
+  }
+
+  .code_editor_textarea:focus {
+    outline: 0px;
+  }
+  
+  .testCases {
+    border: 2px solid var(--glass-border-color); 
+  }
+
+  .Cases {
+    border: 2px solid var(--glass-border-color); 
+  
+  }
+  
+  input {
+    background-color: var(--mode);
+    border: 2px solid var(--glass-border-color);
+  }
+
+  .testCases:hover , .Cases:hover, input:hover{
+    border: 2px solid var(--border-color); 
+  }
+
+  .testCases:focus-within , .Cases:focus-within, input:focus{
+    border: 2px solid var(--hover-color); 
+    outline: none;
+  }

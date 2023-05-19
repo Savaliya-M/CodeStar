@@ -2,8 +2,10 @@ import React from "react";
 import AddQuestionLogic from "./AddQuestionLogic";
 import { Editor } from "@tinymce/tinymce-react";
 import AceEditor from "react-ace";
+import { BsFillPlusSquareFill } from "react-icons/bs";
+
 import "ace-builds/src-noconflict/mode-java";
-import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/theme-vibrant_ink";
 import "ace-builds/src-noconflict/ext-language_tools";
 import "./addQuestion.css";
 
@@ -99,7 +101,6 @@ const AddQuestion = () => {
             <Editor
               value={questionText}
               className="text-editor"
-              // selector="textarea"
               init={{
                 selector: "textarea#basic-example",
                 setup: function (editor) {
@@ -171,17 +172,48 @@ const AddQuestion = () => {
           <div className="CodeEditor">
             <AceEditor
               mode="java"
-              theme="terminal"
-              onChange={(data) => setCode(data)}
-              name="UNIQUE_ID_OF_DIV"
+              theme="vibrant_ink"
+              width="100%"
+              name="defailt-code-editor"
               editorProps={{ $blockScrolling: true }}
+              className="code_editor_textarea"
+              value={code}
+              onChange={(code) => setCode(code)}
               setOptions={{
-                enableBasicAutocompletion: true,
-                enableLiveAutocompletion: true,
-                enableSnippets: true,
+                fontSize: 18,
+                highlightActiveLine: false,
+                selectionStyle: "text",
+                highlightSelectedWord: false,
+                highlightGutterLine: false,
+                showGutter: true,
               }}
             />
-            ,
+          </div>
+
+          <div className="testCases mt-16 p-5">
+            <span className="headmain">Test Cases</span>
+
+            <div className="Cases flex flex-col p-5">
+              <div className="flex flex-row">
+                <span>Sample test cases : 0</span>
+                <span className="ml-auto">
+                  <BsFillPlusSquareFill />
+                </span>
+              </div>
+
+              <input
+                type="text"
+                className="my-5 text-2xl py-2 px-3"
+                name="input"
+                id="input"
+              />
+              <input
+                type="text"
+                className="text-2xl py-2 px-3"
+                name="output"
+                id="output"
+              />
+            </div>
           </div>
         </div>
       </div>
