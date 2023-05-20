@@ -20,84 +20,27 @@ const AddQuestion = () => {
           <h1 className="text-2xl">Java</h1>
         </div>
         <div className="QuestionAddPage px-40">
-          <div className="head-Detail"></div>
+          <div className="head-Detail">
+            <input
+              type="text"
+              className="qhead"
+              placeholder="Question Heading"
+              name="qhead"
+            />
+            <select name="DifficultyLevel" id="DifficultyLevel">
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+            <input
+              type="text"
+              className="RequireSkills"
+              placeholder="Require Skills"
+              name="rSkills"
+            />
+            <input type="number" name="maxScore" id="maxScore" />
+          </div>
           <div className="TextEditor " id="text-editor">
-            {/* <Editor
-              value={questionText}
-              className="text-editor"
-              selector="textarea"
-              init={{
-                setup: function (editor) {
-                  editor.on("init", () => {
-                    document
-                      .getElementById("text-editor")
-                      .setAttribute(
-                        "style",
-                        "border: 2px solid var(--glass-border-color); box-shadow: 0 0 15px var(--box-shadow); height: auto; width: 100%"
-                      );
-
-                    const head = document.getElementsByClassName(
-                      "tox-edit-area__iframe"
-                    )[0].contentWindow.document.head;
-                    console.log(head);
-                    head.insertAdjacentHTML(
-                      "beforeend",
-                      `<style>::-webkit-scrollbar {
-    
-                          width: 7.5px;
-                          background-color: #1e1e1e;
-                          border-radius: 10px;
-                        }
-    
-                        ::-webkit-scrollbar-thumb {
-                          background-color: rgb(99, 99, 99);
-                          border-radius: 10px;
-                        }</style>`
-                    );
-
-                    document
-                      .getElementsByClassName("tox-edit-area__iframe")[0]
-                      .contentWindow.document.body.setAttribute(
-                        "style",
-                        "color: white !important;"
-                      );
-                  });
-                },
-                // toolbar_mode: "sliding",
-                height: 500,
-                // toolbar_mode: "floating",
-
-                // menubar: true,
-                plugins: [
-                  "advlist",
-                  "autolink",
-                  "lists",
-                  "link",
-                  "image",
-                  "charmap",
-                  "preview",
-                  "anchor",
-                  "searchreplace",
-                  "visualblocks",
-                  "code",
-                  "fullscreen",
-                  "insertdatetime",
-                  "media",
-                  "table",
-                  "help",
-                  "wordcount",
-                ],
-                menubar: "file edit view insert format tools table help",
-                toolbar_mode: "floating",
-                autoresize_bottom_margin: 50,
-                toolbar1:
-                  "undo redo | bold italic underline strikethrough | fontfamily fontsize blocks |alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | fullscreen | ltr rtl ",
-                // "undo redo | bold italic underline strikethrough | fontfamily fontsize blocks |alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl ",
-                // toolbar2:
-                // " ",
-              }}
-              onEditorChange={(data) => setQuestionText(data)}
-            /> */}
             <Editor
               value={questionText}
               className="text-editor"
