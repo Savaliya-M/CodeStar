@@ -21,24 +21,33 @@ const AddQuestion = () => {
         </div>
         <div className="QuestionAddPage px-40">
           <div className="head-Detail">
-            <input
-              type="text"
-              className="qhead"
-              placeholder="Question Heading"
-              name="qhead"
-            />
-            <select name="DifficultyLevel" id="DifficultyLevel">
-              <option value="Easy">Easy</option>
-              <option value="Medium">Medium</option>
-              <option value="Hard">Hard</option>
-            </select>
-            <input
-              type="text"
-              className="RequireSkills"
-              placeholder="Require Skills"
-              name="rSkills"
-            />
-            <input type="number" name="maxScore" id="maxScore" />
+            <div>
+              <input
+                type="text"
+                className="qhead my-5 w-8/12 text-2xl py-2 px-3"
+                placeholder="Question Heading"
+                name="qhead"
+              />
+              <select name="DifficultyLevel" id="DifficultyLevel">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+              </select>
+            </div>
+            <div>
+              <input
+                type="text"
+                className="RequireSkills my-5 text-2xl py-2 px-3"
+                placeholder="Require Skills"
+                name="rSkills"
+              />
+              <input
+                type="number"
+                className="my-5 text-2xl py-2 px-3"
+                name="maxScore"
+                id="maxScore"
+              />
+            </div>
           </div>
           <div className="TextEditor " id="text-editor">
             <Editor
