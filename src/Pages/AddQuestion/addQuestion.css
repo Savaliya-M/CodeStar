@@ -182,7 +182,13 @@
     border: 2px solid var(--glass-border-color);
   }
 
-  .testCases:hover , .Cases:hover, input:hover{
+  .DifficultyLevel{
+    background-color: var(--mode);
+    border: 2px solid var(--glass-border-color);
+  }
+
+  
+  .testCases:hover , .Cases:hover, input:hover, .DifficultyLevel:hover{
     border: 2px solid var(--border-color); 
   }
 

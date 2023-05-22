@@ -24,11 +24,15 @@ const AddQuestion = () => {
             <div>
               <input
                 type="text"
-                className="qhead my-5 w-8/12 text-2xl py-2 px-3"
+                className="qhead my-5 mr-8 w-8/12 text-2xl py-2 px-3"
                 placeholder="Question Heading"
                 name="qhead"
               />
-              <select name="DifficultyLevel" id="DifficultyLevel">
+              <select
+                className="DifficultyLevel my-5 w-52 text-2xl py-2 px-3"
+                name="DifficultyLevel"
+                id="DifficultyLevel"
+              >
                 <option value="Easy">Easy</option>
                 <option value="Medium">Medium</option>
                 <option value="Hard">Hard</option>
@@ -37,15 +41,16 @@ const AddQuestion = () => {
             <div>
               <input
                 type="text"
-                className="RequireSkills my-5 text-2xl py-2 px-3"
+                className="RequireSkills my-5 mr-8 w-8/12 text-2xl py-2 px-3"
                 placeholder="Require Skills"
                 name="rSkills"
               />
               <input
                 type="number"
-                className="my-5 text-2xl py-2 px-3"
+                className="my-5 text-2xl w-52 py-2 px-3"
                 name="maxScore"
                 id="maxScore"
+                defaultValue={0}
               />
             </div>
           </div>
@@ -143,7 +148,7 @@ const AddQuestion = () => {
           </div>
 
           <div className="testCases mt-16 p-5">
-            <span className="headmain">Test Cases</span>
+            <span className="headmain ">Test Cases</span>
 
             <div className="Cases flex flex-col p-5">
               <div className="flex flex-row">
@@ -158,12 +163,14 @@ const AddQuestion = () => {
                 className="my-5 text-2xl py-2 px-3"
                 name="input"
                 id="input"
+                placeholder="Input..."
               />
               <input
                 type="text"
                 className="text-2xl py-2 px-3"
                 name="output"
                 id="output"
+                placeholder="Output..."
               />
             </div>
           </div>
