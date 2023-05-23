@@ -10,7 +10,19 @@ import "ace-builds/src-noconflict/ext-language_tools";
 import "./addQuestion.css";
 
 const AddQuestion = () => {
-  const { questionText, setQuestionText, code, setCode } = AddQuestionLogic();
+  const {
+    questionText,
+    setQuestionText,
+    code,
+    setCode,
+    questionData,
+    setQuestionData,
+  } = AddQuestionLogic();
+
+  const addQuestion = (e) => {
+    e.preventDefault();
+    setQuestionData(...questionData, { [e.target.name]: e.target.value });
+  };
 
   return (
     <>
@@ -26,11 +38,12 @@ const AddQuestion = () => {
                 type="text"
                 className="qhead my-5 mr-8 w-8/12 text-2xl py-2 px-3"
                 placeholder="Question Heading"
-                name="qhead"
+                name="questionHead"
+                onChange={addQuestion}
               />
               <select
                 className="DifficultyLevel my-5 w-52 text-2xl py-2 px-3"
-                name="DifficultyLevel"
+                name="level"
                 id="DifficultyLevel"
               >
                 <option value="Easy">Easy</option>
@@ -43,7 +56,8 @@ const AddQuestion = () => {
                 type="text"
                 className="RequireSkills my-5 mr-8 w-8/12 text-2xl py-2 px-3"
                 placeholder="Require Skills"
-                name="rSkills"
+                name="requiredSkill"
+                onChange={addQuestion}
               />
               <input
                 type="number"
@@ -51,6 +65,7 @@ const AddQuestion = () => {
                 name="maxScore"
                 id="maxScore"
                 defaultValue={0}
+                onChange={addQuestion}
               />
             </div>
           </div>
@@ -123,7 +138,9 @@ const AddQuestion = () => {
                 content_style:
                   "body { font-family:Helvetica,Arial,sans-serif; font-size:16px }",
               }}
-              onEditorChange={(data) => setQuestionText(data)}
+              onEditorChange={(data) =>
+                setQuestionData(...questionData, { questionDesc: data })
+              }
             />
           </div>
           <div className="CodeEditor">
@@ -135,7 +152,9 @@ const AddQuestion = () => {
               editorProps={{ $blockScrolling: true }}
               className="code_editor_textarea"
               value={code}
-              onChange={(code) => setCode(code)}
+              onChange={(code) =>
+                setQuestionData(...questionData, { questionCode: code })
+              }
               setOptions={{
                 fontSize: 18,
                 highlightActiveLine: false,
@@ -161,16 +180,18 @@ const AddQuestion = () => {
               <input
                 type="text"
                 className="my-5 text-2xl py-2 px-3"
-                name="input"
+                name="Input"
                 id="input"
                 placeholder="Input..."
+                onChange={addQuestion}
               />
               <input
                 type="text"
                 className="text-2xl py-2 px-3"
-                name="output"
+                name="Output"
                 id="output"
                 placeholder="Output..."
+                onChange={addQuestion}
               />
             </div>
           </div>
