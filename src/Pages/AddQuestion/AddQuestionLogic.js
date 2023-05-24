@@ -10,13 +10,12 @@ const AddQuestionLogic = () => {
     level: "",
     requiredSkill: "",
     maxScore: "",
-    TestCases: [
-      {
-        testCaseId: "",
-        Input: "",
-        Output: "",
-      },
-    ],
+    TestCases: [],
+  });
+  const [testCase, setTestCase] = useState({
+    testCaseId: "",
+    Input: "",
+    Output: "",
   });
 
   useEffect(() => {
@@ -30,6 +29,8 @@ const AddQuestionLogic = () => {
     setCode,
     questionData,
     setQuestionData,
+    testCase,
+    setTestCase,
   };
 };
 

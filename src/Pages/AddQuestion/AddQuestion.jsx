@@ -17,6 +17,8 @@ const AddQuestion = () => {
     setCode,
     questionData,
     setQuestionData,
+    testCase,
+    setTestCase,
   } = AddQuestionLogic();
 
   const addQuestion = (e) => {
@@ -183,7 +185,9 @@ const AddQuestion = () => {
                 name="Input"
                 id="input"
                 placeholder="Input..."
-                onChange={addQuestion}
+                onChange={(e) =>
+                  setTestCase(...testCase, { Input: e.target.value })
+                }
               />
               <input
                 type="text"
@@ -191,7 +195,9 @@ const AddQuestion = () => {
                 name="Output"
                 id="output"
                 placeholder="Output..."
-                onChange={addQuestion}
+                onChange={(e) =>
+                  setTestCase(...testCase, { Output: e.target.value })
+                }
               />
             </div>
           </div>
