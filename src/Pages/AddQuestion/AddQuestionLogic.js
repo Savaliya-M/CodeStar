@@ -13,11 +13,11 @@ const AddQuestionLogic = () => {
     TestCases: [{ testCaseId: "", Input: "", Output: "" }],
   });
 
-  // const [testCase, setTestCase] = useState({
-  //   testCaseId: "",
-  //   Input: "",
-  //   Output: "",
-  // });
+  const [testCase, setTestCase] = useState({
+    testCaseId: "",
+    Input: "",
+    Output: "",
+  });
 
   useEffect(() => {
     console.log(questionData);
