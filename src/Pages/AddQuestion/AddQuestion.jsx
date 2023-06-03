@@ -21,10 +21,10 @@ const AddQuestion = () => {
     setTestCase,
   } = AddQuestionLogic();
 
-  const addQuestion = (e) => {
-    e.preventDefault();
-    setQuestionData(...questionData, { [e.target.name]: e.target.value });
-  };
+  // const addQuestion = (e) => {
+  //   e.preventDefault();
+  //   setQuestionData(...questionData, { [e.target.name]: e.target.value });
+  // };
 
   return (
     <>
